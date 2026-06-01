@@ -62,35 +62,35 @@ public class Solution
 
 // Best Solution:
 
-public class Solution
-{
-  public bool AsteroidsDestroyed(int mass, int[] asteroids)
-  {
-    int[] asteroidMassFrequency = new int[100001];
+// public class Solution
+// {
+//   public bool AsteroidsDestroyed(int mass, int[] asteroids)
+//   {
+//     int[] asteroidMassFrequency = new int[100001];
 
-    long planetMass = mass;
-    int largestAsteroidMass = 0;
+//     long planetMass = mass;
+//     int largestAsteroidMass = 0;
 
-    for (int asteroidIndex = 0; asteroidIndex < asteroids.Length; asteroidIndex++)
-    {
-      int asteroidMass = asteroids[asteroidIndex];
-      asteroidMassFrequency[asteroidMass]++;
+//     for (int asteroidIndex = 0; asteroidIndex < asteroids.Length; asteroidIndex++)
+//     {
+//       int asteroidMass = asteroids[asteroidIndex];
+//       asteroidMassFrequency[asteroidMass]++;
 
-      if (asteroidMass > largestAsteroidMass) largestAsteroidMass = asteroidMass;
-    }
-
-
-    for (int asteroidMass = 1; asteroidMass <= largestAsteroidMass; asteroidMass++)
-    {
-      if (asteroidMass > planetMass)
-      {
-        return false;
-      }
-
-      planetMass += (long)asteroidMass * asteroidMassFrequency[asteroidMass];
-    }
+//       if (asteroidMass > largestAsteroidMass) largestAsteroidMass = asteroidMass;
+//     }
 
 
-    return true;
-  }
-}
+//     for (int asteroidMass = 1; asteroidMass <= largestAsteroidMass; asteroidMass++)
+//     {
+//       if (asteroidMass > planetMass)
+//       {
+//         return false;
+//       }
+
+//       planetMass += (long)asteroidMass * asteroidMassFrequency[asteroidMass];
+//     }
+
+
+//     return true;
+//   }
+// }
